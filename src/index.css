@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Your custom styles can go here */
+/* General Styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -28,7 +28,6 @@ html, body {
   margin: 0;
 }
 
-/* Ensure the app takes up full height */
 #root {
   display: flex;
   flex-direction: column;
@@ -42,4 +41,109 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
+}
+
+/* Projects Section */
+.projects-container {
+  padding: 2rem;
+}
+
+.projects-container .projects-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .projects-container .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-container .projects-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Project Card Styling */
+.projects-container .project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-container .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projects-container .project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projects-container .project-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container .project-card p {
+  color: #555;
+}
+
+.projects-container .view-details-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.projects-container .view-details-btn:hover {
+  background-color: #0056b3;
+}
+
+.projects-container .language-icon {
+  color: #007bff;
+}
+
+/* Modal Styling */
+.projects-container .modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.projects-container .modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.projects-container .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.projects-container .close-btn:hover {
+  color: red;
 }
