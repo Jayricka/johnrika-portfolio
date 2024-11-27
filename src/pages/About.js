@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaDatabase, FaGithub, FaServer, FaBriefcase } from 'react-icons/fa'; // Added FaBriefcase for Work Experience icon
+import alxLogo from '../assets/images/alx-logo.png';
+import samaLogo from '../assets/images/sama-logo.png';
+import upworkLogo from '../assets/images/upwork-logo.png';
+import nouvetaLogo from '../assets/images/nouveta-logo.png';
 import profile from '../assets/images/profile.jpg'; // Importing the profile image
 
 function About() {
@@ -99,122 +103,111 @@ function About() {
 
         {/* Work Experience Section */}
         <motion.div
-          className="mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <h3 className="text-2xl font-semibold mb-4">
-            <FaBriefcase className="inline-block w-8 h-8 text-blue-600 mr-2" />
-            Work Experience
-          </h3>
-          <div className="relative flex justify-center items-center">
-            {/* Vertical Line */}
-            <div className="w-1 bg-gray-400 h-full absolute left-1/2 transform -translate-x-1/2"></div>
+      className="mb-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 1 }}
+    >
+      <h3 className="text-2xl font-semibold mb-4">
+        <FaBriefcase className="inline-block w-8 h-8 text-blue-600 mr-2" />
+        Work Experience
+      </h3>
+      <div className="relative">
+        {/* Vertical Line */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-gray-400 h-full"></div>
 
-            <div className="flex flex-col items-center relative">
-              {/* Freelancer Job */}
-              <div className="flex flex-col items-center mb-8 relative nth-child:odd:flex-row-reverse">
-                <motion.div
-                  className="w-16 h-16 rounded-full border-4 border-blue-600 bg-white shadow-lg z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                >
-                  <img
-                    src="path/to/upwork-logo.png"
-                    alt="Upwork Logo"
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </motion.div>
-                <div className="mt-4 text-center">
-                  <h4 className="text-xl font-semibold text-blue-600">Freelancer</h4>
-                  <p className="text-gray-500 mb-2">January 2021 - Present | Upwork (Remote)</p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Collaborate with clients to understand data analysis needs, ensuring clear communication throughout projects.</li>
-                    <li>Collect, clean, and transform data from various sources, facilitating insightful analysis.</li>
-                    <li>Utilize statistical techniques and visualization tools (Excel, Python, Tableau) to uncover valuable insights.</li>
-                    <li>Generate detailed reports and visualizations, helping clients make informed decisions.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Software Developer Intern Job */}
-              <div className="flex flex-col items-center mb-8 relative nth-child:even:flex-row-reverse">
-                <motion.div
-                  className="w-16 h-16 rounded-full border-4 border-blue-600 bg-white shadow-lg z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                >
-                  <img
-                    src="path/to/alx-logo.png"
-                    alt="ALX Logo"
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </motion.div>
-                <div className="mt-4 text-center">
-                  <h4 className="text-xl font-semibold text-blue-600">Software Developer Intern</h4>
-                  <p className="text-gray-500 mb-2">2023 - Present | ALX Africa | Nairobi, Kenya</p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Developed and maintained web applications using Python and Django, significantly improving user experience and functionality.</li>
-                    <li>Collaborated with the design team to improve UI/UX based on user feedback and best practices.</li>
-                    <li>Assisted in implementing REST APIs and optimized application performance for faster load times.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Associate Job */}
-              <div className="flex flex-col items-center mb-8 relative nth-child:odd:flex-row-reverse">
-                <motion.div
-                  className="w-16 h-16 rounded-full border-4 border-green-600 bg-white shadow-lg z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                >
-                  <img
-                    src="path/to/sama-logo.png"
-                    alt="Sama Logo"
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </motion.div>
-                <div className="mt-4 text-center">
-                  <h4 className="text-xl font-semibold text-green-600">Associate</h4>
-                  <p className="text-gray-500 mb-2">August 2023 - August 2024 | Sama | Nairobi, Kenya</p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Worked with cross-functional teams to implement and optimize data-driven solutions that enhance business performance.</li>
-                    <li>Contributed to the data annotation and validation platform by ensuring high-quality data labeling for complex computer vision, traditional, and Gen AI models.</li>
-                    <li>Assisted in the development of robust validation processes to maintain data integrity and accuracy, enabling machine learning models to perform effectively.</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* I.T Intern Job */}
-              <div className="flex flex-col items-center mb-8 relative nth-child:even:flex-row-reverse">
-                <motion.div
-                  className="w-16 h-16 rounded-full border-4 border-yellow-600 bg-white shadow-lg z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.8 }}
-                >
-                  <img
-                    src="path/to/nouveta-logo.png"
-                    alt="Nouveta Logo"
-                    className="w-full h-full object-contain rounded-full"
-                  />
-                </motion.div>
-                <div className="mt-4 text-center">
-                  <h4 className="text-xl font-semibold text-yellow-600">I.T Intern</h4>
-                  <p className="text-gray-500 mb-2">January 2021 - May 2021 | Nouveta Limited | Nairobi, Kenya</p>
-                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                    <li>Enhanced efficiency of ERP and CRM systems by streamlining billing processes, ensuring timely financial transactions.</li>
-                    <li>Improved data integrity through systematic data tabulation and reporting.</li>
-                  </ul>
-                </div>
+        {/* Work Experience Timeline */}
+        <div className="space-y-12">
+          {/* ALX Africa */}
+          <div className="flex items-center relative">
+            <div className="w-1/2 pr-8 text-right">
+              <h4 className="text-xl font-semibold text-blue-600">Software Developer Intern</h4>
+              <p className="text-gray-500 mb-2">2023 - Present | ALX Africa | Nairobi, Kenya</p>
+              <ul className="list-disc space-y-2 text-gray-700 ml-auto">
+                <li>Developed and maintained web applications using Python and Django.</li>
+                <li>Collaborated with the design team to improve UI/UX.</li>
+                <li>Implemented REST APIs and optimized performance.</li>
+              </ul>
+            </div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-16 h-16 bg-white rounded-full border-4 border-blue-600 shadow-lg flex items-center justify-center">
+                <img
+                  src={alxLogo} // Using the imported logo
+                  alt="ALX Africa"
+                  className="w-10 h-10"
+                />
               </div>
             </div>
           </div>
-        </motion.div>
+
+          {/* Sama */}
+          <div className="flex items-center flex-row-reverse relative">
+            <div className="w-1/2 pl-8 text-left">
+              <h4 className="text-xl font-semibold text-green-600">Associate</h4>
+              <p className="text-gray-500 mb-2">August 2023 - August 2024 | Sama | Nairobi, Kenya</p>
+              <ul className="list-disc space-y-2 text-gray-700">
+                <li>Implemented data-driven solutions to enhance performance.</li>
+                <li>Ensured high-quality data labeling for AI models.</li>
+                <li>Developed validation processes to maintain data integrity.</li>
+              </ul>
+            </div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-16 h-16 bg-white rounded-full border-4 border-green-600 shadow-lg flex items-center justify-center">
+                <img
+                  src={samaLogo} // Using the imported logo
+                  alt="Sama"
+                  className="w-10 h-10"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Freelancer */}
+          <div className="flex items-center relative">
+            <div className="w-1/2 pr-8 text-right">
+              <h4 className="text-xl font-semibold text-blue-600">Freelancer</h4>
+              <p className="text-gray-500 mb-2">January 2021 - Present | Upwork (Remote)</p>
+              <ul className="list-disc space-y-2 text-gray-700 ml-auto">
+                <li>Collaborated with clients to address data analysis needs.</li>
+                <li>Transformed data to facilitate analysis.</li>
+                <li>Created reports and visualizations for data insights.</li>
+              </ul>
+            </div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-16 h-16 bg-white rounded-full border-4 border-blue-600 shadow-lg flex items-center justify-center">
+                <img
+                  src={upworkLogo} // Using the imported logo
+                  alt="Upwork"
+                  className="w-10 h-10"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Nouveta */}
+          <div className="flex items-center flex-row-reverse relative">
+            <div className="w-1/2 pl-8 text-left">
+              <h4 className="text-xl font-semibold text-yellow-600">I.T Intern</h4>
+              <p className="text-gray-500 mb-2">January 2021 - May 2021 | Nouveta Limited | Nairobi, Kenya</p>
+              <ul className="list-disc space-y-2 text-gray-700">
+                <li>Enhanced ERP and CRM system efficiency.</li>
+                <li>Streamlined billing processes and ensured timely transactions.</li>
+                <li>Maintained data integrity through reporting and tabulation.</li>
+              </ul>
+            </div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="w-16 h-16 bg-white rounded-full border-4 border-yellow-600 shadow-lg flex items-center justify-center">
+                <img
+                  src={nouvetaLogo} // Using the imported logo
+                  alt="Nouveta"
+                  className="w-10 h-10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
       </div>
     </div>
   );
