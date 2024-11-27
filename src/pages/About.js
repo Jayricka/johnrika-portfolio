@@ -108,7 +108,8 @@ function About() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 1 }}
     >
-      <h3 className="text-2xl font-semibold mb-4">
+      {/* Work Experience Title */}
+      <h3 className="text-2xl font-semibold mb-4 text-center">
         <FaBriefcase className="inline-block w-8 h-8 text-blue-600 mr-2" />
         Work Experience
       </h3>
@@ -123,7 +124,7 @@ function About() {
             <div className="w-1/2 pr-8 text-right">
               <h4 className="text-xl font-semibold text-blue-600">Software Developer Intern</h4>
               <p className="text-gray-500 mb-2">2023 - Present | ALX Africa | Nairobi, Kenya</p>
-              <ul className="list-disc space-y-2 text-gray-700 ml-auto">
+              <ul className="list-disc space-y-2 text-gray-700 pl-6 pr-6 text-left">
                 <li>Developed and maintained web applications using Python and Django.</li>
                 <li>Collaborated with the design team to improve UI/UX.</li>
                 <li>Implemented REST APIs and optimized performance.</li>
@@ -145,7 +146,7 @@ function About() {
             <div className="w-1/2 pl-8 text-left">
               <h4 className="text-xl font-semibold text-green-600">Associate</h4>
               <p className="text-gray-500 mb-2">August 2023 - August 2024 | Sama | Nairobi, Kenya</p>
-              <ul className="list-disc space-y-2 text-gray-700">
+              <ul className="list-disc space-y-2 text-gray-700 pl-6 pr-6 text-left">
                 <li>Implemented data-driven solutions to enhance performance.</li>
                 <li>Ensured high-quality data labeling for AI models.</li>
                 <li>Developed validation processes to maintain data integrity.</li>
@@ -167,7 +168,7 @@ function About() {
             <div className="w-1/2 pr-8 text-right">
               <h4 className="text-xl font-semibold text-blue-600">Freelancer</h4>
               <p className="text-gray-500 mb-2">January 2021 - Present | Upwork (Remote)</p>
-              <ul className="list-disc space-y-2 text-gray-700 ml-auto">
+              <ul className="list-disc space-y-2 text-gray-700 pl-6 pr-6 text-left">
                 <li>Collaborated with clients to address data analysis needs.</li>
                 <li>Transformed data to facilitate analysis.</li>
                 <li>Created reports and visualizations for data insights.</li>
@@ -189,7 +190,7 @@ function About() {
             <div className="w-1/2 pl-8 text-left">
               <h4 className="text-xl font-semibold text-yellow-600">I.T Intern</h4>
               <p className="text-gray-500 mb-2">January 2021 - May 2021 | Nouveta Limited | Nairobi, Kenya</p>
-              <ul className="list-disc space-y-2 text-gray-700">
+              <ul className="list-disc space-y-2 text-gray-700 pl-6 pr-6 text-left">
                 <li>Enhanced ERP and CRM system efficiency.</li>
                 <li>Streamlined billing processes and ensured timely transactions.</li>
                 <li>Maintained data integrity through reporting and tabulation.</li>
