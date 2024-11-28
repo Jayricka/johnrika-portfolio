@@ -15,7 +15,7 @@ function Footer() {
         {/* Right Side: Social Media Icons */}
         <div className="flex space-x-10 text-3xl">
           <a
-            href="https://github.com/john-rika"
+            href="https://github.com/jayricka"
             className="hover:text-blue-300 transition transform hover:scale-110 hover:translate-y-1"
             aria-label="GitHub"
             title="Visit my GitHub"
