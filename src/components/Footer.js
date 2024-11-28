@@ -34,13 +34,6 @@ function Footer() {
           </a>
         </div>
       </div>
-
-      {/* Bottom: Additional Message */}
-      <div className="text-center mt-6">
-        <p className="text-sm opacity-75">
-          Built with ❤️ by John Rika
-        </p>
-      </div>
     </footer>
   );
 }
