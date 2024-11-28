@@ -19,5 +19,5 @@ RUN yarn build
 # Expose port 3000 for the app
 EXPOSE 3000
 
-# Serve the built app using a static server (npx serve)
-CMD ["npx", "serve", "-s", "build"]
+# Serve the built app using a static server (yarn serve)
+CMD ["yarn", "serve", "-s", "build"]
