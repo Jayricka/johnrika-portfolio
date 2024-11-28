@@ -67,9 +67,9 @@ footer {
   }
 }
 
-/* Project Card Styling */
+/* Project Card Styling with Frosted Glass Effect */
 .projects-container .project-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.3); /* Slight transparency */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
