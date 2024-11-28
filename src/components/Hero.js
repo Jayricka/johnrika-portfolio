@@ -1,17 +1,16 @@
+// src/components/Hero.js
+
 import React from 'react';
-import heroImage from '../assets/images/your-image.jpg'; // Adjust this relative path based on the location of the Hero.js file
+import ParticlesBackground from './ParticlesBackground'; // Import the ParticlesBackground component
 
 const Hero = () => {
   const handleButtonClick = () => {
-    // Example: navigate to the contact section or page
-    window.location.href = 'contact'; // Adjust as needed for navigation
+    window.location.href = 'contact';  // Adjust as needed for navigation
   };
 
   return (
-    <section
-      className="relative bg-cover bg-center h-screen"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+    <section className="relative h-screen">
+      <ParticlesBackground />  {/* Add the Particles background component */}
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       <div className="relative z-10 text-center text-white pt-32">
         <h1 className="text-5xl font-bold animate__animated animate__fadeIn animate__delay-1s">

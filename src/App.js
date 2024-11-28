@@ -6,11 +6,16 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import ParticlesBackground from './components/ParticlesBackground'; // Import ParticlesBackground
 
 function App() {
   return (
     <Router>
-      <div id="root"> {/* Ensure this is the main wrapper */}
+      <div id="root" style={{ position: 'relative', height: '100%' }}> {/* Ensure this is the main wrapper */}
+        
+        {/* Particles Background - make sure it's rendered above other content */}
+        <ParticlesBackground />
+
         <Header />  
 
         <main> {/* Main content wrapper */}
