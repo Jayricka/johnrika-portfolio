@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Redirect root domain to www
+if (window.location.host === "johnrika.com") {
+  window.location.replace("https://www.johnrika.com" + window.location.pathname);
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
