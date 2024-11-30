@@ -1,26 +1,33 @@
-# Use the Node.js 20 version as the base image
-FROM node:20-alpine
+# Build stage
+FROM node:20-alpine AS build
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy package.json and yarn.lock to the working directory
+# Install dependencies
 COPY package.json yarn.lock ./
-
-# Install dependencies using yarn (with --production to exclude devDependencies)
-RUN yarn install --production
+RUN yarn install
 
 # Copy the rest of the application files into the container
 COPY . .
 
-# Build the React app for production inside the container
+# Build the app (if needed, run your build process like webpack)
 RUN yarn build
 
-# Expose port 80 for the app (since it's running in production)
+# Production stage (nginx)
+FROM nginx:alpine
+
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy your custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/
+
+# Copy the built app from the build stage
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80
 EXPOSE 80
 
-# Install a simple static server to serve the built files
-RUN yarn global add serve
-
-# Serve the built app using serve
-CMD ["serve", "-s", "build", "-l", "80"]
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
